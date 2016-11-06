@@ -99,7 +99,7 @@ function get_all_tokens($infile)
             echo "[*] token is string: ", $token, PHP_EOL;
         } else {
             list($id, $text, $line) = $token;
-            echo "[*] line: ", $line, " id: ", $id, " text: ", $text, PHP_EOL;
+            echo "[*] line: ", $line, " token data: ", $id, " ", token_name($id), " ", "'", $text, "'", PHP_EOL;
         }
     }
 }
