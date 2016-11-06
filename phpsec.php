@@ -99,7 +99,10 @@ function get_all_tokens($infile)
             echo "[*] token is string: ", $token, PHP_EOL;
         } else {
             list($id, $text, $line) = $token;
-            echo "[*] line: ", $line, " token data: ", $id, " ", token_name($id), " ", "'", $text, "'", PHP_EOL;
+            // adding single quotes around text so we can see the whitespace
+            // and cr/lf's
+            echo "[*] line: ", $line, " token data: ", $id, " ", \
+                token_name($id), " ", "'", $text, "'", PHP_EOL;
         }
     }
 }
@@ -110,7 +113,7 @@ function get_all_tokens($infile)
  */
 
 // get the file to inspect
-// TODO: allow diretories and a list of file extensions
+// TODO: allow directories and a list of file extensions
 $infile = $argv[1];
 
 // TODO: verify user input, does the file/directory exist
