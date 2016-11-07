@@ -42,6 +42,8 @@ if (!defined('T_ML_COMMENT')) {
 }
 
 
+
+
 /******************************************************************************
  * Functions
  */
@@ -101,8 +103,8 @@ function get_all_tokens($infile)
             list($id, $text, $line) = $token;
             // adding single quotes around text so we can see the whitespace
             // and cr/lf's
-            echo "[*] line: ", $line, " token data: ", $id, " ", \
-                token_name($id), " ", "'", $text, "'", PHP_EOL;
+            echo "[*] line: ", $line, " token data: ", $id, " ", token_name($id),
+                " ", "'", $text, "'", PHP_EOL;
         }
     }
 }
